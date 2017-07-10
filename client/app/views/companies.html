@@ -1,0 +1,22 @@
+
+<a class="btn btn-primary" href="/#!/create/company"><span class="glyphicon glyphicon-plus"></span> Create Company</a>
+<br>
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>Earning</th>
+    <th>Operations</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="company in companies">
+      <td><a ng-href="/#!/company/{{ company._id }}">{{ company.name }}</a></td>
+      <td>{{ company.earning }}</td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#!/company/{{ company._id }}/edit" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
+          <a ng-href="/#!/company/{{ company._id }}/delete" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span></a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
